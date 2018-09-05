@@ -1,0 +1,68 @@
+/* stylelint-disable-next-line block-no-empty */
+:local {
+  .wrapper {
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    will-change: transform;
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+  }
+
+  .text {
+    display: inline-block;
+  }
+
+  .text-infinite {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    pointer-events: none;
+
+    /* stylelint-disable*/
+
+    &.border {
+      .wrapper {
+        > div {
+          -webkit-text-stroke: 1px rgba(255, 255, 255, 0);
+          color: transparent;
+          > div {
+            display: inline-block;
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+          }
+        }
+      }
+    }
+
+    &.color {
+      .wrapper {
+        > div {
+          -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+          color: transparent;
+          > div {
+            display: inline-block;
+            color: white;
+          }
+        }
+      }
+    }
+
+    &.interpolate {
+      .wrapper {
+        > div {
+          &:nth-child(odd) {
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+          }
+          &:nth-child(even) {
+            color: white;
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0);
+          }
+        }
+      }
+    }
+
+    /* stylelint-enable */
+  }
+}
