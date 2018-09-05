@@ -2,18 +2,20 @@
 
 Storybook for reusable vue components and directives
 
-## How to start
+## Adding components
+
+Add the component inside the __src/component__ folder and create a story for it in the __/stories__ folder
+
+Also add a readme file in the component's folder explaining how it works and the list of dependencies if needed.
+
+## Adding directives
+
+Add the directive inside the __src/directive__ folder and create a story for it in the __/stories__ folder
+
+Also add a readme file in the directive's folder explaining how it works and the list of dependencies if needed.
+
+## Running the storybook
 
 ```bash
-git submodule update --init --recursive
-yarn
 yarn storybook
 ```
-
-## How to add components or directives as submodules
-
-```bash
-git submodule add repo_url path_to_clone
-```
-
-
