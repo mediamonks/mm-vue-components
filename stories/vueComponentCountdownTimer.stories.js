@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions';
 import { withKnobs, text, number } from '@storybook/addon-knobs';
 import { withNotes } from '@storybook/addon-notes';
 import Centered from '@storybook/addon-centered';
-import CountdownTimer from '../src/component/countdownTimer';
+import CountdownTimer from '../src/component/CountdownTimer';
 
 storiesOf('Component countdown', module)
   .addDecorator(withKnobs)
